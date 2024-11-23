@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Проєкт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #b6b6b6;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #1a00ae;
+        }
+
+        .login-button {
+            background-color: #61dafb;
+            border: none;
+            width: 100px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .login-button:hover {
+            background-color: #21a1f1;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        article {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            margin: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 500px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        article:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        article img {
+            border-radius: 8px 8px 0 0;
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain;
+            transition: max-height 0.3s ease;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e63946;
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background-color: #61dafb;
+            border: none;
+            width: 100%;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: auto;
+        }
+
+        .buy-button:hover {
+            background-color: #21a1f1;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            background-color: #b6b6b6;
+            top: 60px;
+            width: 100%;
+        }
+
+        .mobile-nav a {
+            padding: 10px 20px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            display: block; 
+        }
+
+        .mobile-menu-button {
+            background-color: #61dafb;
+            border: none;
+            width: 100px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            display: none; 
+        }
+
+        @media (max-width: 960px) {
+            .product-container {
+                justify-content: space-evenly;
+            }
+
+            article {
+                flex: 1 1 calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .mobile-nav.active {
+                display: flex;
+            }
+
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            article {
+                width: 90%;
+            }
+
+            article img {
+                max-height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="c:/Users/yaros/OneDrive/Рабочий стол/lab_web/lablogo.jpg" height="50" alt="Logo">
+        <nav>
+            <a href="Project.html">Головна</a>
+            <a href="https://www.instagram.com/yaroslav23_sp/">Про нас</a>
+            <a href="https://t.me/yaroslav23sp">Контакти</a>
+        </nav>
+        <button class="mobile-menu-button">Меню</button>
+        <button class="login-button">Вхід</button>
+    </header>
+    <nav class="mobile-nav">
+        <a href="Project.html">Головна</a>
+        <a href="https://www.instagram.com/yaroslav23_sp/">Про нас</a>
+        <a href="https://t.me/yaroslav23sp">Контакти</a>
+    </nav>
+    <main>
+        <section class="product-container">
+            <article>
+                <img src="photo iphone 16 pro.webp" alt="Iphone 16 Pro">
+                <h2>Iphone 16 Pro</h2>
+                <p>Потужний флагман із новим дизайном і покращеними камерами.</p>
+                <div class="price">69 999 грн</div>
+                <button class="buy-button">Замовити</button>
+            </article>
+            <article>
+                <img src="photo iphone 16.webp" alt="Iphone 16">
+                <h2>Iphone 16</h2>
+                <p>Чудовий баланс продуктивності та вартості з якісною камерою.</p>
+                <div class="price">47 999 грн</div>
+                <button class="buy-button">Замовити</button>
+            </article>
+            <article>
+                <img src="photo iphone 15 pro.webp" alt="Iphone 15 Pro">
+                <h2>Iphone 15 Pro</h2>
+                <p>Висока продуктивність у поєднанні з преміум-функціями.</p>
+                <div class="price">47 999 грн</div>
+                <button class="buy-button">Замовити</button>
+            </article>
+            <article>
+                <img src="photo iphone 15.webp" alt="Iphone 15">
+                <h2>Iphone 15</h2>
+                <p>Оптимальний вибір для тих, хто цінує зручність і стиль.</p>
+                <div class="price">32 999 грн</div>
+                <button class="buy-button">Замовити</button>
+            </article>
+            <article>
+                <img src="photo iphone 14 pro.jpeg" alt="Iphone 14 Pro">
+                <h2>Iphone 14 Pro</h2>
+                <p>Преміум-функції та унікальний дизайн за доступною ціною.</p>
+                <div class="price">32 999 грн</div>
+                <button class="buy-button">Замовити</button>
+            </article>
+            <article>
+                <img src="photo iphone 14.jpeg" alt="Iphone 14">
+                <h2>Iphone 14</h2>
+                <p>Стильний смартфон для щоденного використання.</p>
+                <div class="price">28 999 грн</div>
+                <button class="buy-button">Замовити</button>
+            </article>
+        </section>
+    </main>
+    <script>
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
